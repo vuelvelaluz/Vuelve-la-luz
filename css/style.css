@@ -1,0 +1,658 @@
+/* ===========================================================
+   Vuelve la Luz — Hoja de estilos principal
+   Paleta cálida y natural: tierra, verde salvia, crema
+   =========================================================== */
+
+:root {
+  --color-fondo: #FBF6EF;
+  --color-fondo-alt: #F3EBDD;
+  --color-texto: #3F3A34;
+  --color-texto-suave: #6B6358;
+  --color-salvia: #8A9A5B;
+  --color-salvia-oscuro: #6F7D48;
+  --color-terracota: #C97C5D;
+  --color-terracota-oscuro: #A85F42;
+  --color-arena: #E8C39E;
+  --color-blanco: #FFFFFF;
+
+  /* Alias semánticos: Ocre = color principal (70%) — logo, títulos, líneas,
+     geometría sagrada, botones principales, y todo lo relacionado con
+     hogar/tierra/fuego. Verde = botones de acción, iconos, enlaces,
+     estados activos, y todo lo relacionado con aire/naturaleza. */
+  --color-ocre: var(--color-terracota);
+  --color-ocre-oscuro: var(--color-terracota-oscuro);
+  --color-verde: var(--color-salvia);
+  --color-verde-oscuro: var(--color-salvia-oscuro);
+
+  --fuente-titulos: 'Fraunces', 'Georgia', serif;
+  --fuente-texto: 'Nunito Sans', 'Helvetica Neue', sans-serif;
+
+  --radio: 14px;
+  --sombra: 0 8px 24px rgba(63, 58, 52, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fuente-texto);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: var(--radio);
+}
+
+a {
+  color: var(--color-verde);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-verde-oscuro);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+  color: var(--color-ocre);
+  line-height: 1.25;
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2rem; margin-bottom: 1rem; }
+h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+
+p { margin-bottom: 1rem; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.seccion {
+  padding: 80px 0;
+}
+
+.seccion-alt {
+  background-color: var(--color-fondo-alt);
+}
+
+.centrado { text-align: center; }
+
+.subtitulo {
+  font-family: var(--fuente-titulos);
+  font-style: italic;
+  color: var(--color-ocre);
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+/* ---------- Botones ---------- */
+
+.boton {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-family: var(--fuente-texto);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+  border: 2px solid transparent;
+}
+
+/* Botones principales: llamadas a la acción más importantes de cada página → ocre */
+.boton-primario {
+  background-color: var(--color-ocre);
+  color: var(--color-blanco);
+}
+
+.boton-primario:hover {
+  background-color: var(--color-ocre-oscuro);
+  color: var(--color-blanco);
+}
+
+/* Botones de acción secundarios/concretos (formularios, avisos, links de apoyo) → verde */
+.boton-secundario {
+  background-color: transparent;
+  border-color: var(--color-verde);
+  color: var(--color-verde-oscuro);
+}
+
+.boton-secundario:hover {
+  background-color: var(--color-verde);
+  color: var(--color-blanco);
+}
+
+/* ---------- Cabecera / Navegación ---------- */
+
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(251, 246, 239, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(201, 124, 93, 0.18);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: var(--fuente-titulos);
+  font-size: 1.5rem;
+  color: var(--color-ocre);
+  font-weight: 600;
+  display: inline-block;
+}
+
+.logo:hover { color: var(--color-ocre); }
+
+.logo-img {
+  height: 110px;
+  width: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.pie .logo-img {
+  height: 170px;
+  margin: 0 auto 0.5rem;
+}
+
+.nav-enlaces {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-enlaces a {
+  color: var(--color-texto);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav-enlaces a.activo,
+.nav-enlaces a:hover {
+  color: var(--color-verde-oscuro);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 2px;
+  background-color: var(--color-texto);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 100px 0 90px;
+  text-align: center;
+}
+
+.hero h1 {
+  max-width: 700px;
+  margin: 0 auto 1.25rem;
+}
+
+.hero .intro {
+  max-width: 560px;
+  margin: 0 auto 2rem;
+  color: var(--color-texto-suave);
+  font-size: 1.15rem;
+}
+
+.hero-botones {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.foto-home {
+  max-width: 420px;
+  margin: 2.5rem auto 0;
+  box-shadow: var(--sombra);
+  border-radius: var(--radio);
+  overflow: hidden;
+}
+
+.foto-home img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radio);
+}
+
+/* ---------- Tarjetas ---------- */
+
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: 2.5rem;
+}
+
+.tarjeta {
+  background-color: var(--color-blanco);
+  border-radius: var(--radio);
+  padding: 32px;
+  box-shadow: var(--sombra);
+}
+
+.tarjeta .icono {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Video / recursos ---------- */
+
+.video-envoltorio {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  margin-bottom: 1rem;
+}
+
+.video-envoltorio iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.recurso-tarjeta {
+  background-color: var(--color-blanco);
+  border-radius: var(--radio);
+  padding: 20px;
+  box-shadow: var(--sombra);
+}
+
+.etiqueta {
+  display: inline-block;
+  background-color: var(--color-arena);
+  color: var(--color-texto);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Narrativa (Sobre mí) ---------- */
+
+.narrativa {
+  max-width: 640px;
+  text-align: center;
+}
+
+.foto-sobre-mi {
+  width: 420px;
+  height: 420px;
+  margin: 0 auto 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--color-ocre);
+  box-shadow: var(--sombra);
+}
+
+.foto-sobre-mi img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 50%;
+}
+
+/* ---------- Carrusel de fotos (Mi camino) ---------- */
+
+.carrusel-mi-camino {
+  position: relative;
+  height: 460px;
+}
+
+.carrusel-mi-camino img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  opacity: 0;
+  animation: carrusel-desvanecer 12s infinite;
+}
+
+.carrusel-mi-camino img:nth-child(1) { animation-delay: 0s; }
+.carrusel-mi-camino img:nth-child(2) { animation-delay: 3s; }
+.carrusel-mi-camino img:nth-child(3) { animation-delay: 6s; }
+.carrusel-mi-camino img:nth-child(4) { animation-delay: 9s; }
+
+@keyframes carrusel-desvanecer {
+  0%   { opacity: 0; }
+  3%   { opacity: 1; }
+  22%  { opacity: 1; }
+  25%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@media (max-width: 780px) {
+  .carrusel-mi-camino {
+    height: 320px;
+  }
+}
+
+.narrativa p {
+  color: var(--color-texto-suave);
+  font-size: 1.1rem;
+}
+
+.poema-volver {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.volver-lista {
+  font-family: var(--fuente-titulos);
+  font-style: italic;
+  color: var(--color-ocre);
+  font-size: 3rem;
+  line-height: 2.4;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+.foto-receta {
+  margin: 2rem 0;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+.foto-receta img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: var(--radio);
+}
+
+.narrativa .lista-receta {
+  text-align: left;
+  color: var(--color-texto-suave);
+  font-size: 1.1rem;
+  margin: 1rem 0 1.5rem 1.25rem;
+}
+
+.narrativa .lista-receta li {
+  margin-bottom: 0.4rem;
+}
+
+.narrativa .spray-meta {
+  color: var(--color-texto-suave);
+  font-size: 0.95rem;
+  font-style: italic;
+  margin: 0.2rem 0 1rem;
+}
+
+.narrativa .intencion-label {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-texto-suave);
+  margin: 1.5rem 0 0.4rem;
+}
+
+.narrativa .intencion {
+  font-family: var(--fuente-titulos);
+  font-style: italic;
+  color: var(--color-ocre);
+  font-size: 1.15rem;
+  margin: 0 0 2.5rem;
+}
+
+.narrativa .truco {
+  background-color: rgba(232, 195, 158, 0.25);
+  border-left: 3px solid var(--color-ocre);
+  border-radius: var(--radio);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  color: var(--color-texto);
+}
+
+.narrativa .truco strong {
+  color: var(--color-ocre);
+}
+
+.narrativa .bienvenida {
+  font-family: var(--fuente-titulos);
+  font-size: 1.6rem;
+  color: var(--color-ocre);
+  margin-top: 2rem;
+}
+
+.narrativa .separador {
+  color: var(--color-ocre);
+  font-size: 1.3rem;
+  letter-spacing: 0.4em;
+  margin: 2.5rem 0;
+}
+
+.narrativa .pregunta-clave {
+  font-family: var(--fuente-titulos);
+  font-style: italic;
+  color: var(--color-ocre);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin: 2.5rem 0;
+}
+
+/* ---------- Blog ---------- */
+
+.entrada-blog {
+  background-color: var(--color-blanco);
+  border-radius: var(--radio);
+  padding: 32px;
+  box-shadow: var(--sombra);
+  margin-bottom: 28px;
+}
+
+.entrada-blog .meta {
+  color: var(--color-texto-suave);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Próximamente / servicios futuros ---------- */
+
+.proximamente {
+  border: 2px dashed var(--color-arena);
+  border-radius: var(--radio);
+  padding: 40px;
+  text-align: center;
+  background-color: var(--color-fondo-alt);
+}
+
+/* ---------- Formulario de contacto ---------- */
+
+.formulario {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.formulario label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+  margin-top: 18px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(201, 124, 93, 0.25);
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  background-color: var(--color-blanco);
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: var(--color-verde);
+}
+
+.formulario textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.formulario button {
+  margin-top: 24px;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+/* ---------- Pie de página ---------- */
+
+.pie {
+  background-color: var(--color-texto);
+  color: var(--color-fondo);
+  padding: 50px 0 24px;
+  text-align: center;
+}
+
+.pie .logo {
+  color: var(--color-arena);
+  margin-bottom: 0.5rem;
+}
+
+.pie p {
+  color: rgba(251, 246, 239, 0.7);
+  font-size: 0.9rem;
+}
+
+.pie-enlaces {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+  margin: 1.25rem 0;
+}
+
+.pie-enlaces a {
+  color: var(--color-fondo);
+}
+
+.pie-enlaces a:hover {
+  color: var(--color-verde);
+}
+
+.pie-frase {
+  font-family: var(--fuente-titulos);
+  font-style: italic;
+  color: var(--color-arena);
+  font-size: 1.05rem;
+  max-width: 480px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 780px) {
+  .logo-img {
+    height: 70px;
+  }
+
+  .pie .logo-img {
+    height: 120px;
+  }
+
+  .nav-enlaces {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-fondo);
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    gap: 18px;
+    display: none;
+    border-bottom: 1px solid rgba(63, 58, 52, 0.08);
+  }
+
+  .nav-enlaces.abierto {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  h1 { font-size: 2.1rem; }
+  h2 { font-size: 1.6rem; }
+
+  .seccion { padding: 56px 0; }
+
+  .foto-sobre-mi {
+    width: 280px;
+    height: 280px;
+  }
+
+  .poema-volver {
+    min-height: 50vh;
+  }
+
+  .volver-lista {
+    font-size: 1.7rem;
+    line-height: 1.9;
+  }
+}
