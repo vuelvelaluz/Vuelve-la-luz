@@ -568,6 +568,28 @@ p { margin-bottom: 1rem; }
   margin-top: 24px;
 }
 
+.formulario-consentimiento {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: var(--color-texto-suave);
+}
+
+.formulario-consentimiento input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  accent-color: var(--color-verde);
+  flex-shrink: 0;
+}
+
+.formulario-consentimiento label {
+  margin: 0;
+  font-weight: 400;
+}
+
 .redes-sociales {
   display: flex;
   gap: 20px;
@@ -576,7 +598,75 @@ p { margin-bottom: 1rem; }
   font-weight: 700;
 }
 
+/* ---------- Páginas legales ---------- */
+
+.legal {
+  max-width: 760px;
+  text-align: left;
+}
+
+.legal .fecha-actualizacion {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--color-texto-suave);
+  margin-bottom: 2rem;
+}
+
+.legal h2 {
+  margin-top: 2.25rem;
+  font-size: 1.5rem;
+}
+
+.legal h2:first-of-type {
+  margin-top: 0;
+}
+
+.legal h3 {
+  margin-top: 1.5rem;
+  color: var(--color-verde-oscuro);
+  font-size: 1.1rem;
+}
+
+.legal p,
+.legal li {
+  color: var(--color-texto-suave);
+}
+
+.legal ul,
+.legal ol {
+  margin: 0 0 1.25rem 1.25rem;
+}
+
+.legal li {
+  margin-bottom: 0.4rem;
+}
+
+.legal strong {
+  color: var(--color-texto);
+}
+
+.legal a {
+  text-decoration: underline;
+}
+
 /* ---------- Pie de página ---------- */
+
+.pie-legal {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  list-style: none;
+  margin: 0 0 1.25rem;
+  font-size: 0.8rem;
+}
+
+.pie-legal a {
+  color: rgba(251, 246, 239, 0.6);
+}
+
+.pie-legal a:hover {
+  color: var(--color-verde);
+}
 
 .pie {
   background-color: var(--color-texto);
