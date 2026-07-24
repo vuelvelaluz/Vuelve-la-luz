@@ -714,7 +714,7 @@ p { margin-bottom: 1rem; }
 /* ---------- Newsletter (pie de página) ---------- */
 
 .newsletter-pie {
-  max-width: 460px;
+  max-width: 540px;
   margin: 0 auto 2rem;
   padding-top: 1.75rem;
   border-top: 1px solid rgba(251, 246, 239, 0.15);
@@ -724,14 +724,19 @@ p { margin-bottom: 1rem; }
   font-family: var(--fuente-titulos);
   font-style: italic;
   color: var(--color-arena);
-  font-size: 1.15rem;
-  margin-bottom: 0.4rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.9rem;
 }
 
 .newsletter-texto {
   font-size: 0.85rem;
+  line-height: 1.6;
   color: rgba(251, 246, 239, 0.7);
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.newsletter-texto:last-of-type {
+  margin-bottom: 1.25rem;
 }
 
 .newsletter-form {
