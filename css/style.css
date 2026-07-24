@@ -711,6 +711,60 @@ p { margin-bottom: 1rem; }
   line-height: 1.6;
 }
 
+/* ---------- Newsletter (pie de página) ---------- */
+
+.newsletter-pie {
+  max-width: 460px;
+  margin: 0 auto 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(251, 246, 239, 0.15);
+}
+
+.newsletter-titulo {
+  font-family: var(--fuente-titulos);
+  font-style: italic;
+  color: var(--color-arena);
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+.newsletter-texto {
+  font-size: 0.85rem;
+  color: rgba(251, 246, 239, 0.7);
+  margin-bottom: 1.1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1 1 220px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(251, 246, 239, 0.25);
+  background-color: rgba(251, 246, 239, 0.08);
+  color: var(--color-fondo);
+  font-family: var(--fuente-texto);
+  font-size: 0.95rem;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+  color: rgba(251, 246, 239, 0.5);
+}
+
+.newsletter-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--color-verde);
+}
+
+.newsletter-form button {
+  flex-shrink: 0;
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 780px) {
