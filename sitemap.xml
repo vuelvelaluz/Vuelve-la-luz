@@ -9,10 +9,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vuelvelaluz.com/servicios.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://vuelvelaluz.com/recursos.html</loc>
     <priority>0.8</priority>
   </url>
@@ -46,6 +42,22 @@
   </url>
   <url>
     <loc>https://vuelvelaluz.com/diario-la-tormenta-que-lo-cambio-todo.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vuelvelaluz.com/mapa-de-tu-ano.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vuelvelaluz.com/lectura-express.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vuelvelaluz.com/lectura-profunda.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vuelvelaluz.com/acompanamiento-continuado.html</loc>
     <priority>0.6</priority>
   </url>
 </urlset>
