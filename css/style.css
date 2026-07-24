@@ -226,6 +226,23 @@ p { margin-bottom: 1rem; }
   margin: 0 auto 1.25rem;
 }
 
+.foto-hero-nombre {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--color-ocre);
+  box-shadow: var(--sombra);
+}
+
+.foto-hero-nombre img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .hero .intro {
   max-width: 560px;
   margin: 0 auto 2rem;
@@ -306,8 +323,8 @@ p { margin-bottom: 1rem; }
 
 .etiqueta {
   display: inline-block;
-  background-color: var(--color-arena);
-  color: var(--color-texto);
+  background-color: rgba(138, 154, 91, 0.18);
+  color: var(--color-verde-oscuro);
   font-size: 0.8rem;
   font-weight: 700;
   padding: 4px 14px;
@@ -470,7 +487,7 @@ p { margin-bottom: 1rem; }
 }
 
 .narrativa .separador {
-  color: var(--color-ocre);
+  color: var(--color-verde);
   font-size: 1.3rem;
   letter-spacing: 0.4em;
   margin: 2.5rem 0;
