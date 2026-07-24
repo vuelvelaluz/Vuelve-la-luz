@@ -723,8 +723,9 @@ p { margin-bottom: 1rem; }
 .newsletter-titulo {
   font-family: var(--fuente-titulos);
   font-style: italic;
-  color: var(--color-arena);
-  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-ocre);
+  font-size: 1.9rem;
   margin-bottom: 0.9rem;
 }
 
