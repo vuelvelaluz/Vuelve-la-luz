@@ -6,22 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
   if (boton && enlaces) {
     boton.addEventListener('click', function () {
       enlaces.classList.toggle('abierto');
+      boton.setAttribute('aria-expanded', enlaces.classList.contains('abierto') ? 'true' : 'false');
     });
   }
 
-  // Envío del formulario de contacto a asalamamonsalve@gmail.com
-  // Envío nativo del navegador (sin fetch/AJAX) para evitar bloqueadores
-  // de anuncios/rastreadores que interceptan llamadas JS a dominios externos.
-  var formulario = document.querySelector('.formulario');
-  if (formulario) {
-    formulario.addEventListener('submit', function () {
-      var mensajeExito = formulario.querySelector('.mensaje-exito');
-      if (mensajeExito) {
-        mensajeExito.style.display = 'block';
-      }
-      window.setTimeout(function () {
-        formulario.reset();
-      }, 50);
-    });
-  }
 });

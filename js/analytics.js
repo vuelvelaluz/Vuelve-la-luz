@@ -1,7 +1,7 @@
 /* Analytics solo se carga después de aceptar la medición. */
 (function () {
   'use strict';
-  var measurementId = ''; // Se completará al crear el flujo web de Google Analytics.
+  var measurementId = 'G-C7VNMRWLS2';
   if (!/^G-[A-Z0-9]+$/.test(measurementId)) return;
   var storageKey = 'vll-analytics-consent-v1';
   var choice = null;
@@ -73,7 +73,7 @@
         try { localStorage.setItem(storageKey, JSON.stringify({value: choice, time: Date.now()})); } catch (_) {}
         if (choice === 'accepted') start(); else stop();
         banner.hidden = true;
-        settings.focus();
+        settings.focus({preventScroll: true});
       });
     });
     if (choice === 'accepted') start(); else stop();

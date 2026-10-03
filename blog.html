@@ -11,10 +11,8 @@
   <meta property="og:title" content="Diario de viaje y reflexiones personales | Vuelve la Luz">
   <meta property="og:description" content="Relatos y reflexiones de Alejandra Salama desde el Camino de Santiago, China, India, Egipto y Avalon. Viajes hacia fuera y hacia dentro.">
   <meta property="og:image" content="https://vuelvelaluz.com/images/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=seo-20261003">
+  <link rel="preload" href="fonts/nunito-sans-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=seo-20261003b">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Vuelve la Luz">
   <meta name="twitter:card" content="summary_large_image">
@@ -23,13 +21,13 @@
   <meta name="twitter:image" content="https://vuelvelaluz.com/images/logo.png">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://vuelvelaluz.com/#website", "url": "https://vuelvelaluz.com/", "name": "Vuelve la Luz", "inLanguage": "es", "publisher": {"@id": "https://vuelvelaluz.com/#alejandra"}}, {"@type": "Person", "@id": "https://vuelvelaluz.com/#alejandra", "name": "Alejandra Salama Monsalve", "url": "https://vuelvelaluz.com/sobre-mi.html", "sameAs": ["https://www.instagram.com/vuelvelaluz"]}, {"@type": "CollectionPage", "@id": "https://vuelvelaluz.com/blog.html#webpage", "url": "https://vuelvelaluz.com/blog.html", "name": "Diario de viaje y reflexiones personales | Vuelve la Luz", "description": "Relatos y reflexiones de Alejandra Salama desde el Camino de Santiago, China, India, Egipto y Avalon. Viajes hacia fuera y hacia dentro.", "inLanguage": "es", "isPartOf": {"@id": "https://vuelvelaluz.com/#website"}}]}</script>
-  <script src="js/analytics.js?v=1" defer></script>
+  <script src="js/analytics.js?v=2" defer></script>
 </head>
 <body>
 
   <header class="cabecera">
     <nav class="nav">
-      <a href="index.html" class="logo"><img src="images/logo.png" alt="Vuelve la Luz" class="logo-img" width="500" height="500" decoding="async"></a>
+      <a href="/" class="logo"><img src="images/logo-320.webp" alt="Vuelve la Luz" class="logo-img" width="320" height="320" decoding="async" srcset="images/logo-160.webp 160w, images/logo-320.webp 320w" sizes="110px"></a>
       <ul class="nav-enlaces">
         <li><a href="sobre-mi.html">Mi camino</a></li>
         <li><a href="recursos.html">Prácticas</a></li>
@@ -37,7 +35,7 @@
         <li><a href="blog.html" class="activo">Diario de viaje</a></li>
         <li><a href="contacto.html">¿Cómo puedo acompañarte?</a></li>
       </ul>
-      <button class="menu-toggle" aria-label="Abrir menú">
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </nav>
@@ -60,7 +58,7 @@
         <article class="entrada-blog">
           <span class="etiqueta">Reflexiones</span>
           <div class="meta">Diario de viaje · Camino de Santiago</div>
-          <h3>EL CAMINO</h3>
+          <h2 class="titulo-tarjeta">EL CAMINO</h2>
           <p>440 kilómetros de conexión, belleza y vuelta a la vida. Un Camino que empezó con una rueda pinchada y una pregunta: ¿Y qué más es posible?</p>
           <a href="diario-el-camino.html">Leer EL CAMINO →</a>
         </article>
@@ -68,7 +66,7 @@
         <article class="entrada-blog">
           <span class="etiqueta">Reflexiones</span>
           <div class="meta">Diario de viaje · Avalon</div>
-          <h3>La tormenta que lo cambió todo</h3>
+          <h2 class="titulo-tarjeta">La tormenta que lo cambió todo</h2>
           <p>Reflexiones desde Avalon: sobre confiar, fluir y todo lo que una tormenta puede enseñarte cuando crees que el viaje ya ha terminado.</p>
           <a href="diario-la-tormenta-que-lo-cambio-todo.html">Leer La tormenta que lo cambió todo →</a>
         </article>
@@ -76,7 +74,7 @@
         <article class="entrada-blog">
           <span class="etiqueta">Reflexiones</span>
           <div class="meta">Diario de viaje · China · 4 capítulos</div>
-          <h3>Cuatro capítulos desde China</h3>
+          <h2 class="titulo-tarjeta">Cuatro capítulos desde China</h2>
           <p>Una serie de 4 capítulos sobre el viaje a China: los prejuicios que heredamos, las contradicciones de un país inmenso, la libertad y las murallas que no se ven.</p>
           <a href="diario-china.html">Leer Cuatro capítulos desde China →</a>
         </article>
@@ -84,7 +82,7 @@
         <article class="entrada-blog">
           <span class="etiqueta">Reflexiones</span>
           <div class="meta">Diario de viaje · Egipto</div>
-          <h3>Entre dos mundos</h3>
+          <h2 class="titulo-tarjeta">Entre dos mundos</h2>
           <p>Reflexiones desde Egipto: bucear en el mar Rojo, los templos como mapas del alma y todo lo que se descubre entre dos mundos.</p>
           <a href="diario-entre-dos-mundos.html">Leer Entre dos mundos →</a>
         </article>
@@ -92,18 +90,19 @@
         <article class="entrada-blog">
           <span class="etiqueta">Reflexiones</span>
           <div class="meta">Diario de viaje · India</div>
-          <h3>La rata</h3>
+          <h2 class="titulo-tarjeta">La rata</h2>
           <p>Reflexiones desde India: sobre el merecimiento, la culpa, la belleza y todo lo que un viaje remueve por dentro.</p>
           <a href="diario-la-rata.html">Leer La rata →</a>
         </article>
 
       </div>
     </section>
-  </main>
+  <section class="seccion seccion-alt"><div class="container narrativa guia"><h2>Un pequeño espacio para escucharte</h2><p>Si hoy necesitas empezar por una pregunta o un gesto sencillo, estas guías pueden acompañarte.</p><ul><li><a href="salir-del-piloto-automatico.html">Cómo salir del piloto automático y volver a estar presente</a></li><li><a href="reconectar-contigo-misma.html">Ejercicios para volver a conectar contigo misma</a></li><li><a href="journaling-para-conocerte-mejor.html">Journaling para conocerte mejor: preguntas para empezar</a></li><li><a href="todo-esta-bien-pero-no-me-siento-bien.html">Cuando todo parece estar bien, pero tú no te sientes bien</a></li><li><a href="recuperar-la-ilusion.html">Recuperar la ilusión a través de pequeños cambios</a></li></ul></div></section>
+</main>
 
   <footer class="pie">
     <div class="container">
-      <div class="logo"><img src="images/logo.png" alt="Vuelve la Luz" class="logo-img" width="500" height="500" decoding="async"></div>
+      <div class="logo"><img src="images/logo-320.webp" alt="Vuelve la Luz" class="logo-img" width="320" height="320" decoding="async" srcset="images/logo-160.webp 160w, images/logo-320.webp 320w" sizes="110px"></div>
       <ul class="pie-enlaces">
         <li><a href="sobre-mi.html">Mi camino</a></li>
         <li><a href="recursos.html">Prácticas</a></li>

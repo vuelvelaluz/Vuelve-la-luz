@@ -11,10 +11,8 @@
   <meta property="og:title" content="Camino de Santiago: 440 km de vuelta a la vida | Vuelve la Luz">
   <meta property="og:description" content="El Camino de Santiago de Alejandra y Marta: 440 kilómetros entre paisajes del Cantábrico, lluvia, conversaciones y conexión. ¿Y qué más es posible?">
   <meta property="og:image" content="https://vuelvelaluz.com/images/el-camino/montanas.jpeg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=seo-20261003">
+  <link rel="preload" href="fonts/nunito-sans-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=seo-20261003b">
   <style>
     .pie-enlaces, .pie-legal { flex-wrap: wrap; }
     .camino-fotos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px; margin: 2rem 0; }
@@ -31,13 +29,13 @@
   <meta name="twitter:image" content="https://vuelvelaluz.com/images/el-camino/montanas.jpeg">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://vuelvelaluz.com/#website", "url": "https://vuelvelaluz.com/", "name": "Vuelve la Luz", "inLanguage": "es", "publisher": {"@id": "https://vuelvelaluz.com/#alejandra"}}, {"@type": "Person", "@id": "https://vuelvelaluz.com/#alejandra", "name": "Alejandra Salama Monsalve", "url": "https://vuelvelaluz.com/sobre-mi.html", "sameAs": ["https://www.instagram.com/vuelvelaluz"]}, {"@type": "WebPage", "@id": "https://vuelvelaluz.com/diario-el-camino.html#webpage", "url": "https://vuelvelaluz.com/diario-el-camino.html", "name": "Camino de Santiago: 440 km de vuelta a la vida | Vuelve la Luz", "description": "El Camino de Santiago de Alejandra y Marta: 440 kilómetros entre paisajes del Cantábrico, lluvia, conversaciones y conexión. ¿Y qué más es posible?", "inLanguage": "es", "isPartOf": {"@id": "https://vuelvelaluz.com/#website"}}, {"@type": "BlogPosting", "@id": "https://vuelvelaluz.com/diario-el-camino.html#article", "headline": "EL CAMINO", "description": "El Camino de Santiago de Alejandra y Marta: 440 kilómetros entre paisajes del Cantábrico, lluvia, conversaciones y conexión. ¿Y qué más es posible?", "mainEntityOfPage": {"@id": "https://vuelvelaluz.com/diario-el-camino.html#webpage"}, "author": {"@id": "https://vuelvelaluz.com/#alejandra"}, "publisher": {"@id": "https://vuelvelaluz.com/#alejandra"}, "inLanguage": "es", "image": "https://vuelvelaluz.com/images/el-camino/montanas.jpeg"}]}</script>
-  <script src="js/analytics.js?v=1" defer></script>
+  <script src="js/analytics.js?v=2" defer></script>
 </head>
 <body>
 
   <header class="cabecera">
     <nav class="nav">
-      <a href="index.html" class="logo"><img src="images/logo.png" alt="Vuelve la Luz" class="logo-img" width="500" height="500" decoding="async"></a>
+      <a href="/" class="logo"><img src="images/logo-320.webp" alt="Vuelve la Luz" class="logo-img" width="320" height="320" decoding="async" srcset="images/logo-160.webp 160w, images/logo-320.webp 320w" sizes="110px"></a>
       <ul class="nav-enlaces">
         <li><a href="sobre-mi.html">Mi camino</a></li>
         <li><a href="recursos.html">Prácticas</a></li>
@@ -45,7 +43,7 @@
         <li><a href="blog.html" class="activo">Diario de viaje</a></li>
         <li><a href="contacto.html">¿Cómo puedo acompañarte?</a></li>
       </ul>
-      <button class="menu-toggle" aria-label="Abrir menú">
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </nav>
@@ -74,7 +72,7 @@
         <p>Y allí estábamos: mi madre, yo, los gatos refugiados en una esquina a la sombra, una rueda destrozada y, en el suelo, una baldosa que decía simplemente:</p>
         <p class="pregunta-clave"><strong>Y.</strong></p>
 <div class="camino-fotos camino-foto-sola">
-<figure><img src="images/el-camino/baldosa-y.jpeg" alt="Baldosa de cerámica con la letra Y" loading="lazy" decoding="async" width="768" height="1024"></figure>
+<figure><img src="images/el-camino/baldosa-y-768.webp" alt="Baldosa de cerámica con la letra Y" loading="lazy" decoding="async" width="768" height="1024" srcset="images/el-camino/baldosa-y-480.webp 480w, images/el-camino/baldosa-y-768.webp 768w" sizes="(max-width: 700px) calc(100vw - 40px), 900px"></figure>
 </div>
         <p>¿Y si no llego a coger el tren?</p>
         <p>Vale.</p>
@@ -90,7 +88,7 @@
         <p>En Chamartín cogí el tren rumbo a Santander con Marta. Rumbo a uno de esos viajes de los que vuelves más sabia, más ligera, más plena y, sobre todo, más llena de vida.</p>
         <p class="pregunta-clave"><strong>El Camino de Santiago.</strong></p>
 <div class="camino-fotos camino-foto-sola">
-<figure><img src="images/el-camino/montanas.jpeg" alt="Alejandra con mochila ante un paisaje de montañas" loading="lazy" decoding="async" width="480" height="360"></figure>
+<figure><img src="images/el-camino/montanas-480.webp" alt="Alejandra con mochila ante un paisaje de montañas" loading="lazy" decoding="async" width="480" height="360" srcset="images/el-camino/montanas-480.webp 480w" sizes="(max-width: 700px) calc(100vw - 40px), 900px"></figure>
 </div>
       </div>
     </section>
@@ -102,13 +100,13 @@
         <p>De integración.</p>
         <p>Y también de preparación para una nueva etapa que yo ya sentía abriéndose.</p>
 <div class="camino-fotos">
-<figure><img src="images/el-camino/vidriera.jpeg" alt="Vidriera de colores enmarcada en piedra" loading="lazy" decoding="async" width="768" height="1024"></figure>
-<figure><img src="images/el-camino/espejo.jpeg" alt="Dos caminantes reflejadas en un espejo junto a una casa de piedra" loading="lazy" decoding="async" width="360" height="480"></figure>
+<figure><img src="images/el-camino/vidriera-768.webp" alt="Vidriera de colores enmarcada en piedra" loading="lazy" decoding="async" width="768" height="1024" srcset="images/el-camino/vidriera-480.webp 480w, images/el-camino/vidriera-768.webp 768w" sizes="(max-width: 700px) calc(100vw - 40px), 900px"></figure>
+<figure><img src="images/el-camino/espejo-360.webp" alt="Dos caminantes reflejadas en un espejo junto a una casa de piedra" loading="lazy" decoding="async" width="360" height="480" srcset="images/el-camino/espejo-360.webp 360w" sizes="(max-width: 700px) calc(100vw - 40px), 900px"></figure>
 </div>
         <p>Paisajes de esos que te dejan sin aliento. Flores de todas las formas y colores. Baños reconstituyentes en el Cantábrico helado. Caminar bajo la lluvia. Cantar a voz en grito.</p>
 <div class="camino-fotos">
-<figure><img src="images/el-camino/costa.jpeg" alt="Alejandra junto a una playa durante el Camino" loading="lazy" decoding="async" width="360" height="480"></figure>
-<figure><img src="images/el-camino/lluvia.jpeg" alt="Alejandra con impermeable rojo junto al mar" loading="lazy" decoding="async" width="480" height="360"></figure>
+<figure><img src="images/el-camino/costa-360.webp" alt="Alejandra junto a una playa durante el Camino" loading="lazy" decoding="async" width="360" height="480" srcset="images/el-camino/costa-360.webp 360w" sizes="(max-width: 700px) calc(100vw - 40px), 900px"></figure>
+<figure><img src="images/el-camino/lluvia-480.webp" alt="Alejandra con impermeable rojo junto al mar" loading="lazy" decoding="async" width="480" height="360" srcset="images/el-camino/lluvia-480.webp 480w" sizes="(max-width: 700px) calc(100vw - 40px), 900px"></figure>
 </div>
         <p>Ha sido una vuelta a la vida.</p>
         <p>Un suspiro para el alma.</p>
@@ -121,8 +119,8 @@
         <p>Mucho desnivel. Muchas de esas cuestas que miras desde abajo y, antes siquiera de empezar a subir, les das las gracias. Porque sabes que cuando llegues arriba vas a ser un poquito más fuerte.</p>
         <p>Mariposas volando alrededor. Gatos esquivos. Caballos salvajes.</p>
 <div class="camino-fotos">
-<figure><img src="images/el-camino/caracol.jpeg" alt="Caracol de concha amarilla sobre la tierra" loading="lazy" decoding="async" width="360" height="480"></figure>
-<figure><img src="images/el-camino/plantas.jpeg" alt="Fachada roja rodeada de plantas y calabazas colgantes" loading="lazy" decoding="async" width="360" height="480"></figure>
+<figure><img src="images/el-camino/caracol-360.webp" alt="Caracol de concha amarilla sobre la tierra" loading="lazy" decoding="async" width="360" height="480" srcset="images/el-camino/caracol-360.webp 360w" sizes="(max-width: 700px) calc(100vw - 40px), 900px"></figure>
+<figure><img src="images/el-camino/plantas-360.webp" alt="Fachada roja rodeada de plantas y calabazas colgantes" loading="lazy" decoding="async" width="360" height="480" srcset="images/el-camino/plantas-360.webp 360w" sizes="(max-width: 700px) calc(100vw - 40px), 900px"></figure>
 </div>
         <p>Bosques y rocas.</p>
         <p>Playas y precipicios.</p>
@@ -132,8 +130,8 @@
         <p>Kilómetro tras kilómetro.</p>
         <p>Como si mientras avanzábamos por el Camino algo dentro también fuese encontrando su sitio.</p>
 <div class="camino-fotos">
-<figure><img src="images/el-camino/valle.jpeg" alt="Casas y prados verdes entre montañas bajo un cielo nublado" loading="lazy" decoding="async" width="360" height="480"></figure>
-<figure><img src="images/el-camino/pies.jpeg" alt="Pies descansando en sandalias sobre la hierba" loading="lazy" decoding="async" width="360" height="480"></figure>
+<figure><img src="images/el-camino/valle-360.webp" alt="Casas y prados verdes entre montañas bajo un cielo nublado" loading="lazy" decoding="async" width="360" height="480" srcset="images/el-camino/valle-360.webp 360w" sizes="(max-width: 700px) calc(100vw - 40px), 900px"></figure>
+<figure><img src="images/el-camino/pies-360.webp" alt="Pies descansando en sandalias sobre la hierba" loading="lazy" decoding="async" width="360" height="480" srcset="images/el-camino/pies-360.webp 360w" sizes="(max-width: 700px) calc(100vw - 40px), 900px"></figure>
 </div>
       </div>
     </section>
@@ -151,11 +149,11 @@
         <a href="blog.html" class="boton boton-secundario">← Volver al Diario de viaje</a>
       </div>
     </section>
-  </main>
+  <section class="seccion"><div class="container narrativa"><h2>Un pequeño paso de vuelta a ti</h2><p>No siempre hace falta un viaje largo para empezar a escucharte. Puedes explorar estos <a href="reconectar-contigo-misma.html">ejercicios para volver a conectar contigo</a> o regalarte una de las <a href="recursos.html">prácticas en audio</a>.</p></div></section></main>
 
   <footer class="pie">
     <div class="container">
-      <div class="logo"><img src="images/logo.png" alt="Vuelve la Luz" class="logo-img" width="500" height="500" decoding="async"></div>
+      <div class="logo"><img src="images/logo-320.webp" alt="Vuelve la Luz" class="logo-img" width="320" height="320" decoding="async" srcset="images/logo-160.webp 160w, images/logo-320.webp 320w" sizes="110px"></div>
       <ul class="pie-enlaces">
         <li><a href="sobre-mi.html">Mi camino</a></li>
         <li><a href="recursos.html">Prácticas</a></li>
