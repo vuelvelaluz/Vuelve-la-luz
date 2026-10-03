@@ -50,6 +50,7 @@ body {
 }
 
 img {
+  height: auto;
   max-width: 100%;
   display: block;
   border-radius: var(--radio);
@@ -822,3 +823,12 @@ p { margin-bottom: 1rem; }
     line-height: 1.9;
   }
 }
+
+/* Consentimiento de estadísticas: mismas opciones y visibilidad. */
+.analytics-consent { position: fixed; z-index: 2000; left: 16px; right: 16px; bottom: 16px; max-width: 760px; margin: auto; padding: 22px; background: var(--color-fondo); color: var(--color-texto); border: 1px solid var(--color-ocre); border-radius: 12px; box-shadow: 0 4px 30px #0003; max-height: 80vh; overflow-y: auto; }
+.analytics-consent[hidden] { display: none; }
+.analytics-consent p { margin-bottom: 14px; font-size: 1rem; }
+.analytics-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.analytics-actions button { flex: 1 1 200px; padding: 12px 18px; border: 1px solid var(--color-verde); border-radius: 8px; color: var(--color-texto); background: var(--color-blanco); font: inherit; font-weight: 700; cursor: pointer; }
+.analytics-settings { display: block; margin: 1rem auto 0; padding: 8px; border: 0; background: transparent; color: inherit; font: inherit; text-decoration: underline; cursor: pointer; }
+.analytics-actions button:focus-visible, .analytics-settings:focus-visible { outline: 3px solid var(--color-ocre); outline-offset: 3px; }
