@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Mis visitas · Vuelve la Luz</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css?v=seo-20261003c">
+</head>
+<body>
+  <main class="seccion">
+    <div class="container narrativa guia">
+      <a href="/"><img src="/images/logo-160.webp" alt="Vuelve la Luz" width="120" height="120"></a>
+      <h1>Disfruta de tu espacio sin contar tus visitas</h1>
+      <p>Activa esta opción en el navegador del móvil que utilizas para escuchar tus meditaciones. Así tus visitas y reproducciones dejarán de sumarse a las estadísticas de esta web.</p>
+      <p id="estado" role="status" aria-live="polite"></p>
+      <p><button type="button" id="excluir" class="boton boton-primario">No contar mis visitas en este navegador</button></p>
+      <p><a class="boton boton-secundario" href="/recursos.html">Ir a mis meditaciones</a></p>
+      <p>La preferencia se guarda solo en este navegador. Repítelo en cada dispositivo o navegador que utilices, y si borras los datos del sitio. En modo privado no se conserva al cerrar la sesión. No cambia el funcionamiento de los audios ni borra estadísticas anteriores.</p>
+      <p><button type="button" id="restaurar" class="boton boton-secundario" hidden>Quitar la exclusión</button></p>
+    </div>
+  </main>
+  <script>
+  (function () {
+    'use strict';
+    var key = 'vll-analytics-excluded-v1';
+    var consent = 'vll-analytics-consent-v1';
+    var status = document.getElementById('estado');
+    var enable = document.getElementById('excluir');
+    var disable = document.getElementById('restaurar');
+    function render() {
+      try {
+        var active = localStorage.getItem(key) === '1';
+        status.textContent = active ? 'Exclusión activada: tus visitas desde este navegador no se cuentan.' : 'Este navegador todavía no tiene activada la exclusión.';
+        enable.hidden = active; disable.hidden = !active;
+      } catch (_) { status.textContent = 'El navegador no permite guardar esta preferencia. Puedes rechazar las estadísticas en Configurar cookies, al pie de la web.'; }
+    }
+    enable.addEventListener('click', function () {
+      try {
+        localStorage.setItem(key, '1');
+        localStorage.setItem(consent, JSON.stringify({value: 'rejected', time: Date.now()}));
+        render();
+      } catch (_) { status.textContent = 'No se ha podido guardar la exclusión. Comprueba que el navegador permite almacenar los datos del sitio.'; }
+    });
+    disable.addEventListener('click', function () {
+      try {
+        localStorage.removeItem(key); render();
+        status.textContent = 'Exclusión retirada. Las estadísticas siguen rechazadas hasta que decidas aceptarlas en Configurar cookies.';
+      } catch (_) { status.textContent = 'No se ha podido retirar la exclusión.'; }
+    });
+    window.addEventListener('storage', render);
+    render();
+  }());
+  </script>
+</body>
+</html>

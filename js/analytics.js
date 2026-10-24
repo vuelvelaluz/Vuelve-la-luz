@@ -4,6 +4,10 @@
   var measurementId = 'G-C7VNMRWLS2';
   if (!/^G-[A-Z0-9]+$/.test(measurementId)) return;
   var storageKey = 'vll-analytics-consent-v1';
+  var exclusionKey = 'vll-analytics-excluded-v1';
+  function excluded() {
+    try { return localStorage.getItem(exclusionKey) === '1'; } catch (_) { return false; }
+  }
   var choice = null;
   var loaded = false;
   var expires = 180 * 24 * 60 * 60 * 1000;
@@ -19,6 +23,7 @@
     try { var u = new URL(value); return u.origin + u.pathname; } catch (_) { return ''; }
   }
   function start() {
+    if (excluded()) { stop(); return; }
     window['ga-disable-' + measurementId] = false;
     gtag('consent', 'update', { analytics_storage: 'granted' });
     if (loaded) return;
@@ -49,14 +54,17 @@
     });
   }
   function event(name, params) {
-    if (choice === 'accepted') gtag('event', name, params);
+    if (choice === 'accepted' && !excluded()) gtag('event', name, params);
   }
   function init() {
     var banner = document.createElement('section');
     banner.className = 'analytics-consent';
     banner.setAttribute('aria-label', 'Preferencias de estadísticas');
     banner.innerHTML = '<p><strong>¿Nos ayudas a conocer este espacio?</strong> Con tu permiso, usamos Google Analytics para medir visitas y uso de las prácticas. Puedes aceptar o rechazar y cambiar tu decisión en cualquier momento. <a href="/cookies.html">Información sobre cookies</a>.</p><div class="analytics-actions"><button type="button" data-choice="accepted">Aceptar estadísticas</button><button type="button" data-choice="rejected">Rechazar estadísticas</button></div>';
-    banner.hidden = choice !== null;
+    if (excluded()) {
+      banner.querySelector('p').innerHTML = 'Este navegador está excluido de las estadísticas. Puedes seguir escuchando tus meditaciones. <a href="/mis-visitas.html">Gestionar la exclusión</a>.';
+    }
+    banner.hidden = excluded() || choice !== null;
     document.body.appendChild(banner);
     var settings = document.createElement('button');
     settings.type = 'button';
@@ -101,7 +109,7 @@
         else if (form.classList.contains('formulario')) event('contact_form_submit', {form_name: 'contacto'});
       });
     });
-    window.addEventListener('storage', function (e) { if (e.key === storageKey) location.reload(); });
+    window.addEventListener('storage', function (e) { if (e.key === storageKey || e.key === exclusionKey) location.reload(); });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 }());
