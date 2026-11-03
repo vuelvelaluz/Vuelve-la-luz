@@ -54,8 +54,10 @@
           <span class="oraculo-eyebrow">Un producto digital de Vuelve la Luz</span>
           <h1>Crea tu propia<br><em>baraja de oráculo.</em></h1>
           <p class="oraculo-intro">Aprende a crear tu propia baraja de oráculo con tus palabras e imágenes. Un curso online y una aplicación para explorar tus símbolos, diseñar tus cartas y dar forma a una creación que nazca de ti.</p>
+          <p class="oraculo-note"><strong>Curso autónomo: 144 € · IVA incluido.</strong> Incluye seis meses de acceso a la aplicación, sin renovación automática de ese acceso incluido.</p>
           <div class="oraculo-actions">
-            <a class="boton boton-primario" data-oraculo-trial href="https://taller.vuelvelaluz.com/primera-carta?origen=web-taller">Prueba tu primera carta gratis</a>
+            <a class="boton boton-primario" data-oraculo-checkout href="https://taller.vuelvelaluz.com/compra?plan=course">Empieza a crear tu baraja · 144 €</a>
+            <a class="boton boton-secundario" data-oraculo-trial href="https://taller.vuelvelaluz.com/primera-carta?origen=web-taller">Prueba tu primera carta gratis</a>
             <a class="boton boton-secundario" href="#modalidades">Ver modalidades del taller</a>
             <a class="boton boton-secundario" href="https://taller.vuelvelaluz.com">Entrar al taller</a>
           </div>
@@ -156,6 +158,7 @@
     </section>
 
     <section class="oraculo-section" aria-labelledby="entrada-titulo"><div class="container"><div class="oraculo-entry"><div><h2 id="entrada-titulo">¿Ya tienes cuenta en el taller?</h2><p>Entra con tu correo y contraseña, o mediante un enlace seguro, para continuar tus proyectos. Si tienes el curso activo, encontrarás las lecciones y los dossiers en Mi formación.</p></div><a class="boton boton-primario" href="https://taller.vuelvelaluz.com/formacion">Ir a mi formación</a></div></div></section>
+    <section class="oraculo-section"><div class="container" data-captacion-consent aria-label="Preferencias de medición del taller"></div></section>
   </main>
 
 <footer class="pie">
@@ -193,17 +196,7 @@
     </div>
   </footer>
 <script src="js/main.js?v=newsletter-20261016" defer></script>
-<script>
-(function () {
-  var code = new URLSearchParams(window.location.search).get('ref');
-  if (!code || !/^[A-Za-z0-9_-]{2,32}$/.test(code)) return;
-  document.querySelectorAll('a[data-oraculo-checkout]').forEach(function (link) {
-    var target = new URL(link.href);
-    target.searchParams.set('ref', code.toUpperCase());
-    link.href = target.href;
-  });
-})();
-</script>
+<script src="js/oraculo-captacion.js?v=20261103" defer></script>
 </body>
 </html>
 
