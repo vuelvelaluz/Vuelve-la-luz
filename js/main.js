@@ -5,8 +5,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (boton && enlaces) {
     boton.addEventListener('click', function () {
-      enlaces.classList.toggle('abierto');
-      boton.setAttribute('aria-expanded', enlaces.classList.contains('abierto') ? 'true' : 'false');
+      var abierto = enlaces.classList.toggle('abierto');
+      boton.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+      boton.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
+    });
+    enlaces.addEventListener('click', function (event) {
+      if (event.target.closest('a') && enlaces.classList.contains('abierto')) {
+        enlaces.classList.remove('abierto');
+        boton.setAttribute('aria-expanded', 'false');
+        boton.setAttribute('aria-label', 'Abrir menú');
+      }
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && enlaces.classList.contains('abierto')) {
+        enlaces.classList.remove('abierto');
+        boton.setAttribute('aria-expanded', 'false');
+        boton.setAttribute('aria-label', 'Abrir menú');
+        boton.focus();
+      }
     });
   }
 
