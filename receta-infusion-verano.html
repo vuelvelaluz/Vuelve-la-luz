@@ -26,6 +26,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://vuelvelaluz.com/#website", "url": "https://vuelvelaluz.com/", "name": "Vuelve la Luz", "inLanguage": "es", "publisher": {"@id": "https://vuelvelaluz.com/#alejandra"}}, {"@type": "Person", "@id": "https://vuelvelaluz.com/#alejandra", "name": "Alejandra Salama Monsalve", "url": "https://vuelvelaluz.com/sobre-mi.html", "sameAs": ["https://www.instagram.com/vuelvelaluz"]}, {"@type": "WebPage", "@id": "https://vuelvelaluz.com/receta-infusion-verano.html#webpage", "url": "https://vuelvelaluz.com/receta-infusion-verano.html", "name": "Mi infusión favorita para el verano — Vuelve la Luz", "description": "Receta de infusión fría de hibisco, hierbabuena y especias para hidratarte con placer en verano.", "inLanguage": "es", "isPartOf": {"@id": "https://vuelvelaluz.com/#website"}}, {"@type": "BlogPosting", "@id": "https://vuelvelaluz.com/receta-infusion-verano.html#article", "headline": "Mi infusión favorita para el verano", "description": "Receta de infusión fría de hibisco, hierbabuena y especias para hidratarte con placer en verano.", "mainEntityOfPage": {"@id": "https://vuelvelaluz.com/receta-infusion-verano.html#webpage"}, "author": {"@id": "https://vuelvelaluz.com/#alejandra"}, "publisher": {"@id": "https://vuelvelaluz.com/#alejandra"}, "inLanguage": "es", "image": "https://vuelvelaluz.com/images/infusion-hibisco.png"}]}</script>
   <script src="js/analytics.js?v=2" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Recipe", "@id": "https://vuelvelaluz.com/receta-infusion-verano.html#receta", "name": "Infusión fría de hibisco, hierbabuena y especias", "image": "https://vuelvelaluz.com/images/infusion-hibisco-1200.webp", "author": {"@type": "Person", "name": "Alejandra Salama Monsalve"}, "recipeIngredient": ["1 litro de agua", "2 cucharadas de hibisco", "5 o 6 ramas de hierbabuena fresca", "5 vainas de cardamomo ligeramente machacadas", "2 estrellas de anís estrellado", "Un trocito de jengibre fresco", "La piel de medio limón ecológico"], "recipeInstructions": [{"@type": "HowToStep", "text": "Lleva el agua a ebullición."}, {"@type": "HowToStep", "text": "Añade el hibisco, la hierbabuena, el cardamomo, el anís estrellado, el jengibre y la piel de limón."}, {"@type": "HowToStep", "text": "Apaga el fuego y deja infusionar entre 10 y 15 minutos."}, {"@type": "HowToStep", "text": "Cuela la infusión y deja que se enfríe."}, {"@type": "HowToStep", "text": "Guárdala en una botella de cristal en la nevera y sírvela bien fría."}], "inLanguage": "es"}]}</script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Saltar al contenido</a>
@@ -34,12 +35,12 @@
     <nav class="nav">
       <a href="/" class="logo"><img src="images/logo-320.webp" alt="Vuelve la Luz" class="logo-img" width="320" height="320" decoding="async" srcset="images/logo-160.webp 160w, images/logo-320.webp 320w" sizes="110px"></a>
       <ul class="nav-enlaces" id="menu-principal">
-        <li><a href="sobre-mi.html">Quién soy</a></li>
         <li><a href="recursos.html">Pausa y escucha</a></li>
         <li><a href="crea-tu-oraculo.html">Crea tu oráculo</a></li>
-        <li><a href="recetas-magicas.html" class="activo">Cocina alquímica</a></li>
+        <li><a href="recetas-magicas.html">Cocina alquímica</a></li>
         <li><a href="blog.html">Historias</a></li>
-        <li><a href="contacto.html">Hablemos</a></li>
+        <li><a href="sobre-mi.html">Quién soy</a></li>
+        <li><a href="contacto.html#escribirme">Hablemos</a></li>
       </ul>
       <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
         <span></span><span></span><span></span>
@@ -53,8 +54,8 @@
         <span class="subtitulo">Receta mágica · Cocina consciente</span>
         <h1>Mi infusión favorita para el verano</h1>
         <p>Por <a href="sobre-mi.html" rel="author">Alejandra Salama Monsalve</a></p>
-      </div>
-    </section>
+      <div class="hero-enlaces"><a class="boton boton-secundario" href="#receta">Ir a la receta ↓</a></div>
+      </div></section>
 
     <section class="seccion seccion-alt">
       <div class="container narrativa">
@@ -70,7 +71,7 @@
 
     <section class="seccion">
       <div class="container narrativa">
-        <h2>Mi mezcla de hoy</h2>
+        <h2 id="receta">Mi mezcla de hoy</h2>
         <ul class="lista-receta">
           <li>1 litro de agua</li>
           <li>2 cucharadas de hibisco</li>
@@ -122,7 +123,7 @@
         <li><a href="crea-tu-oraculo.html">Crea tu oráculo</a></li>
         <li><a href="recetas-magicas.html">Cocina alquímica</a></li>
         <li><a href="blog.html">Historias</a></li>
-        <li><a href="contacto.html">Hablemos</a></li>
+        <li><a href="contacto.html#escribirme">Hablemos</a></li>
       </ul>
       <ul class="pie-legal">
         <li><a href="aviso-legal.html">Aviso legal</a></li>
@@ -131,9 +132,7 @@
       </ul>
       <div class="newsletter-pie">
         <p class="newsletter-titulo">Una carta para ti</p>
-        <p class="newsletter-texto">De vez en cuando te escribiré.</p>
-        <p class="newsletter-texto">No para llenar tu bandeja de entrada, sino para compartir una reflexión, un viaje, un libro, una receta, una práctica o una de esas pequeñas cosas que la vida susurra cuando aprendemos a escuchar.</p>
-        <p class="newsletter-texto">Si resuena contigo, será un placer encontrarnos también allí.</p>
+        <p class="newsletter-texto">De vez en cuando comparto una reflexión, una receta o una práctica de mi vida cotidiana. Si te apetece, nos encontramos en tu correo.</p>
         <form method="POST" action="https://8bead3da.sibforms.com/serve/MUIFAHtXzu5J9DOND5W1m_s428f5tpBbJRgEv57Hu-zXkQh_n5nRxzkXFHTFy_CUyc4R-G3pcopGgQM831xMx38PVJlZSNMpmPq1zdumBmJyFMBDTCx9k4EZpyHoEAe0r_qXKYKbUF-6x9BkqT_P_dG1jikAXEALv2CKvu1wZptqgvqe31WmihQMD8yAYO4W9H5ltpNYCWFiE38y1w==" class="newsletter-form" target="_blank">
           <input type="email" name="EMAIL" aria-label="Tu correo electrónico para recibir Una carta para ti" autocomplete="email" placeholder="Tu correo electrónico" required>
           <button type="submit" class="boton boton-primario">Apuntarme</button>

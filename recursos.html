@@ -40,12 +40,12 @@
     <nav class="nav">
       <a href="/" class="logo"><img src="images/logo-320.webp" alt="Vuelve la Luz" class="logo-img" width="320" height="320" decoding="async" srcset="images/logo-160.webp 160w, images/logo-320.webp 320w" sizes="110px"></a>
       <ul class="nav-enlaces" id="menu-principal">
-        <li><a href="sobre-mi.html">Quién soy</a></li>
-        <li><a href="recursos.html" class="activo">Pausa y escucha</a></li>
+        <li><a href="recursos.html" aria-current="page">Pausa y escucha</a></li>
         <li><a href="crea-tu-oraculo.html">Crea tu oráculo</a></li>
         <li><a href="recetas-magicas.html">Cocina alquímica</a></li>
         <li><a href="blog.html">Historias</a></li>
-        <li><a href="contacto.html">Hablemos</a></li>
+        <li><a href="sobre-mi.html">Quién soy</a></li>
+        <li><a href="contacto.html#escribirme">Hablemos</a></li>
       </ul>
       <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
         <span></span><span></span><span></span>
@@ -85,42 +85,42 @@
       <div class="container">
         <span class="subtitulo">Audios</span>
         <h2>Escucha cuando quieras</h2>
-        <div class="rejilla">
-          <div class="recurso-tarjeta">
+        <div class="rejilla audios-rejilla">
+          <div class="recurso-tarjeta"><h3>MEDITACIÓN: Conecta con tu niño interior</h3>
             <span class="etiqueta">Audio · 11 min 28 s</span>
             <img src="images/nino-interior-portada-1280.webp" alt="Portada de Conecta con tu niño interior: una mujer abrazando a una niña" width="1280" height="720" loading="lazy" style="display: block; width: 100%; height: auto; max-height: none; margin-bottom: 1rem;" decoding="async" srcset="images/nino-interior-portada-480.webp 480w, images/nino-interior-portada-960.webp 960w, images/nino-interior-portada-1280.webp 1280w" sizes="(max-width: 700px) calc(100vw - 40px), 900px">
             <audio controls preload="none" aria-label="MEDITACIÓN: Conecta con tu niño interior" style="width: 100%; margin-bottom: 1rem;">
               <source src="audios/conecta-con-tu-nino-interior.m4a" type="audio/mp4">
               Tu navegador no puede reproducir este audio. <a href="audios/conecta-con-tu-nino-interior.m4a">Escuchar la meditación</a>.
             </audio>
-            <h3>MEDITACIÓN: Conecta con tu niño interior</h3>
+
           <p><a href="meditacion-nino-interior.html">Sobre la práctica: Conecta con tu niño interior</a></p>
           </div>
-          <div class="recurso-tarjeta">
+          <div class="recurso-tarjeta"><h3>PRANAYAMA: Nadi Shodhana, respiración alterna</h3>
             <span class="etiqueta">Audio · 12 min 25 s</span>
             <audio controls preload="none" aria-label="PRANAYAMA: Nadi Shodhana, respiración alterna. Volver a tu centro." style="width: 100%; margin-bottom: 1rem;">
               <source src="audios/pranayama-nadi-shodhana.mp3" type="audio/mpeg">
               Tu navegador no puede reproducir este audio. <a href="audios/pranayama-nadi-shodhana.mp3">Escuchar la práctica</a>.
             </audio>
-            <h3>PRANAYAMA: Nadi Shodhana, respiración alterna</h3>
+
           <p><a href="nadi-shodhana-respiracion-alterna.html">Sobre la práctica: Nadi Shodhana</a></p>
             <p>Volver a tu centro.</p>
           </div>
-          <div class="recurso-tarjeta">
+          <div class="recurso-tarjeta"><h3>Volver a ti</h3>
             <span class="etiqueta">Audio</span>
-            <audio controls preload="none" style="width: 100%; margin-bottom: 1rem;">
+            <audio controls preload="none" aria-label="Escuchar la meditación" style="width: 100%; margin-bottom: 1rem;">
               <source src="audios/volver-a-ti.mp3" type="audio/mpeg">
             </audio>
-            <h3>Volver a ti</h3>
+
             <p>Volver a mí es una meditación guiada de unos cinco minutos para esos momentos en los que sientes que el ruido de fuera ha apagado un poco tu propia voz. No necesitas experiencia previa. Solo regalarte un pequeño espacio para respirar, bajar el ritmo y volver a escucharte.</p>
           </div>
-          <div class="recurso-tarjeta">
+          <div class="recurso-tarjeta"><h3>Mejorar mi vida en todos los aspectos</h3>
             <span class="etiqueta">Audio</span>
-            <audio controls preload="none" style="width: 100%; margin-bottom: 1rem;">
+            <audio controls preload="none" aria-label="Escuchar la meditación" style="width: 100%; margin-bottom: 1rem;">
               <source src="audios/mejorar-mi-vida-en-todos-los-aspectos.mp3" type="audio/mpeg">
             </audio>
-            <h3>Mejorar mi vida en todos los aspectos</h3>
-            <p>A veces no necesitamos cambiarlo todo de golpe. Solo empezar a pensar, sentir y actuar desde un lugar diferente. Esta meditación te invita a abrirte a nuevas posibilidades, liberar aquello que ya no suma y conectar con la versión de ti que sabe que una vida más plena se construye desde dentro. Escúchala siempre que necesites recordar que cada pequeño cambio en tu interior puede transformar también tu realidad.</p>
+
+            <p>Un audio para hacer una pausa y explorar qué te gustaría cuidar o cambiar en tu día a día.</p>
           </div>
         </div>
       </div>
@@ -128,7 +128,7 @@
 
 
   <section class="seccion seccion-alt"><div class="container narrativa guia"><h2>Un pequeño espacio para escucharte</h2><p>Si hoy necesitas empezar por una pregunta o un gesto sencillo, estas guías pueden acompañarte.</p><ul><li><a href="salir-del-piloto-automatico.html">Cómo salir del piloto automático y volver a estar presente</a></li><li><a href="reconectar-contigo-misma.html">Ejercicios para volver a conectar contigo misma</a></li><li><a href="journaling-para-conocerte-mejor.html">Journaling para conocerte mejor: preguntas para empezar</a></li><li><a href="todo-esta-bien-pero-no-me-siento-bien.html">Cuando todo parece estar bien, pero tú no te sientes bien</a></li><li><a href="recuperar-la-ilusion.html">Recuperar la ilusión a través de pequeños cambios</a></li></ul></div></section>
-<section class="seccion seccion-alt" aria-labelledby="practicas-vll"><div class="container narrativa"><h2 id="practicas-vll">Meditaciones de Vuelve la Luz, en español</h2><p>Vuelve la Luz es el proyecto de Alejandra Salama Monsalve. Aquí puedes escuchar prácticas guiadas gratuitas en español desde el navegador. También puedes conocer <a href="sobre-mi.html">a la creadora y su recorrido</a>.</p><h3>¿Cómo elijo una práctica?</h3><p>Lee primero su presentación. <a href="meditacion-conecta-con-tus-raices.html">Conecta con tus raíces</a> propone una meditación bailada; <a href="meditacion-nino-interior.html">Conecta con tu niño interior</a> ofrece otra forma de escucharte. Busca un lugar donde puedas prestar atención y elige el momento que te resulte cómodo. Puedes pausar o terminar cuando lo necesites.</p><h3>¿Tengo que dejar la mente en blanco?</h3><p>No necesitas conseguir un estado especial para empezar. Si te distraes, puedes volver a escuchar la guía sin exigirte hacerlo de una manera perfecta. Estas prácticas son una experiencia personal de bienestar; no sustituyen atención sanitaria ni ofrecen resultados terapéuticos garantizados.</p><h3>¿Hay un recorrido para practicar cada día?</h3><p>La aplicación <a href="https://vuelve-la-luz-beta.vercel.app/">Vuelve la Luz: 21 días para salir del piloto automático</a> ofrece un recorrido completo gratuito, sin tarjeta, con temas, prácticas y un diario privado. La presentación propone unos 10–20 minutos al día, a tu ritmo. El acceso se solicita mediante un enlace por correo. Es una experiencia distinta de la formación para crear cartas.</p><h3>¿Y si quiero crear mis propias imágenes y mensajes?</h3><p><a href="crea-tu-oraculo.html">Crea tu propio oráculo</a> es otro producto digital de Vuelve la Luz: una formación con aplicación para diseñar una baraja personal. Su acceso y sus precios son independientes de estos audios gratuitos.</p><p>Información revisada el <time datetime="2026-11-03">3 de noviembre de 2026</time>.</p></div></section>
+<section class="seccion seccion-alt" aria-labelledby="practicas-vll"><div class="container narrativa"><h2 id="practicas-vll">Meditaciones de Vuelve la Luz, en español</h2><p>Vuelve la Luz es el proyecto de Alejandra Salama Monsalve. Aquí puedes escuchar prácticas guiadas gratuitas en español desde el navegador. También puedes conocer <a href="sobre-mi.html">a la creadora y su recorrido</a>.</p><h3>¿Cómo elijo una práctica?</h3><p>Lee primero su presentación. <a href="meditacion-conecta-con-tus-raices.html">Conecta con tus raíces</a> propone una meditación bailada; <a href="meditacion-nino-interior.html">Conecta con tu niño interior</a> ofrece otra forma de escucharte. Busca un lugar donde puedas prestar atención y elige el momento que te resulte cómodo. Puedes pausar o terminar cuando lo necesites.</p><h3>¿Tengo que dejar la mente en blanco?</h3><p>No necesitas conseguir un estado especial para empezar. Si te distraes, puedes volver a escuchar la guía sin exigirte hacerlo de una manera perfecta. Estas prácticas son una experiencia personal de bienestar; no sustituyen atención sanitaria ni ofrecen resultados terapéuticos garantizados.</p><h3>¿Hay un recorrido para practicar cada día?</h3><p>La aplicación <a href="https://vuelve-la-luz-beta.vercel.app/">Vuelve la Luz: 21 días para salir del piloto automático</a> ofrece un recorrido completo gratuito, sin tarjeta, con temas, prácticas y un diario privado. La presentación propone unos 10–20 minutos al día, a tu ritmo. El acceso se solicita mediante un enlace por correo. Es una experiencia distinta de la formación para crear cartas.</p><p>Información revisada el <time datetime="2026-11-03">3 de noviembre de 2026</time>.</p></div></section>
 </main>
 
   <footer class="pie">
@@ -140,7 +140,7 @@
         <li><a href="crea-tu-oraculo.html">Crea tu oráculo</a></li>
         <li><a href="recetas-magicas.html">Cocina alquímica</a></li>
         <li><a href="blog.html">Historias</a></li>
-        <li><a href="contacto.html">Hablemos</a></li>
+        <li><a href="contacto.html#escribirme">Hablemos</a></li>
       </ul>
       <ul class="pie-legal">
         <li><a href="aviso-legal.html">Aviso legal</a></li>
@@ -149,9 +149,7 @@
       </ul>
       <div class="newsletter-pie">
         <p class="newsletter-titulo">Una carta para ti</p>
-        <p class="newsletter-texto">De vez en cuando te escribiré.</p>
-        <p class="newsletter-texto">No para llenar tu bandeja de entrada, sino para compartir una reflexión, un viaje, un libro, una receta, una práctica o una de esas pequeñas cosas que la vida susurra cuando aprendemos a escuchar.</p>
-        <p class="newsletter-texto">Si resuena contigo, será un placer encontrarnos también allí.</p>
+        <p class="newsletter-texto">De vez en cuando comparto una reflexión, una receta o una práctica de mi vida cotidiana. Si te apetece, nos encontramos en tu correo.</p>
         <form method="POST" action="https://8bead3da.sibforms.com/serve/MUIFAHtXzu5J9DOND5W1m_s428f5tpBbJRgEv57Hu-zXkQh_n5nRxzkXFHTFy_CUyc4R-G3pcopGgQM831xMx38PVJlZSNMpmPq1zdumBmJyFMBDTCx9k4EZpyHoEAe0r_qXKYKbUF-6x9BkqT_P_dG1jikAXEALv2CKvu1wZptqgvqe31WmihQMD8yAYO4W9H5ltpNYCWFiE38y1w==" class="newsletter-form" target="_blank">
           <input type="email" name="EMAIL" aria-label="Tu correo electrónico para recibir Una carta para ti" autocomplete="email" placeholder="Tu correo electrónico" required>
           <button type="submit" class="boton boton-primario">Apuntarme</button>
