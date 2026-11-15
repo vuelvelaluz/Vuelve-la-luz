@@ -1,0 +1,10 @@
+.sobre-galeria { width: min(100%, 460px); margin: 0 auto 2.5rem; }
+.sobre-fotos { position: relative; height: 310px; background: #eee6da; overflow: hidden; border-radius: 6px; }
+.sobre-foto { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; visibility: hidden; transition: opacity 900ms ease, visibility 900ms; }
+.sobre-foto.visible { opacity: 1; visibility: visible; }
+.sobre-controles:not([hidden]) { display: flex; justify-content: center; align-items: center; gap: 12px; padding-top: 12px; }
+.sobre-controles button { font: inherit; color: var(--color-texto); background: transparent; border: 1px solid #cbb9a7; border-radius: 24px; min-height: 44px; min-width: 44px; padding: 6px 14px; cursor: pointer; }
+.sobre-controles button:hover { background: #eee6da; }
+.sobre-controles button:focus-visible { outline: 2px solid var(--color-ocre); outline-offset: 3px; }
+@media(max-width: 500px) { .sobre-fotos { height: 270px; } }
+@media(prefers-reduced-motion: reduce) { .sobre-foto { transition: none; } }

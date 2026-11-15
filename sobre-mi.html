@@ -17,6 +17,8 @@
   <meta property="og:image" content="https://vuelvelaluz.com/images/logo.png">
   <link rel="preload" href="fonts/nunito-sans-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=collage-20261113">
+  <link rel="stylesheet" href="css/sobre-mi.css?v=20261115">
+  <script src="js/sobre-mi.js?v=20261115" defer></script>
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Vuelve la Luz">
   <meta name="twitter:card" content="summary_large_image">
@@ -24,7 +26,7 @@
   <meta name="twitter:description" content="Conoce a Alejandra Salama Monsalve, creadora de Vuelve la Luz: cocina, viajes y prácticas personales para vivir con presencia y volver a la calma.">
   <meta name="twitter:image" content="https://vuelvelaluz.com/images/logo.png">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://vuelvelaluz.com/#website","url":"https://vuelvelaluz.com/","name":"Vuelve la Luz","inLanguage":"es","publisher":{"@id":"https://vuelvelaluz.com/#alejandra"}},{"@type":"Person","@id":"https://vuelvelaluz.com/#alejandra","name":"Alejandra Salama Monsalve","url":"https://vuelvelaluz.com/sobre-mi.html","sameAs":["https://www.instagram.com/vuelvelaluz"]},{"@type":"ProfilePage","@id":"https://vuelvelaluz.com/sobre-mi.html#webpage","url":"https://vuelvelaluz.com/sobre-mi.html","name":"Alejandra Salama: mi camino | Vuelve la Luz","description":"Conoce a Alejandra Salama Monsalve, creadora de Vuelve la Luz: cocina, viajes y prácticas personales para vivir con presencia y volver a la calma.","inLanguage":"es","isPartOf":{"@id":"https://vuelvelaluz.com/#website"},"mainEntity":{"@id":"https://vuelvelaluz.com/#alejandra"},"dateModified":"2026-11-03"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://vuelvelaluz.com/#website","url":"https://vuelvelaluz.com/","name":"Vuelve la Luz","inLanguage":"es","publisher":{"@id":"https://vuelvelaluz.com/#alejandra"}},{"@type":"Person","@id":"https://vuelvelaluz.com/#alejandra","name":"Alejandra Salama Monsalve","url":"https://vuelvelaluz.com/sobre-mi.html","sameAs":["https://www.instagram.com/vuelvelaluz"]},{"@type":"ProfilePage","@id":"https://vuelvelaluz.com/sobre-mi.html#webpage","url":"https://vuelvelaluz.com/sobre-mi.html","name":"Alejandra Salama: mi camino | Vuelve la Luz","description":"Conoce a Alejandra Salama Monsalve, creadora de Vuelve la Luz: cocina, viajes y prácticas personales para vivir con presencia y volver a la calma.","inLanguage":"es","isPartOf":{"@id":"https://vuelvelaluz.com/#website"},"mainEntity":{"@id":"https://vuelvelaluz.com/#alejandra"},"dateModified":"2026-11-15"}]}</script>
   <script src="js/analytics.js?v=2" defer></script>
 </head>
 <body>
@@ -56,8 +58,19 @@
 
     <section class="seccion seccion-alt">
       <div class="container narrativa">
-        <div class="foto-sobre-mi">
-          <img src="images/mi-camino-4-1080.webp" alt="Alejandra contemplando un paisaje de costa y montañas durante un viaje" width="1080" height="1080" decoding="async" loading="lazy" srcset="images/mi-camino-4-480.webp 480w, images/mi-camino-4-960.webp 960w, images/mi-camino-4-1080.webp 1080w" sizes="(max-width: 700px) calc(100vw - 40px), 900px">
+        <div class="sobre-galeria" role="region" aria-roledescription="carrusel" aria-label="Momentos de mi camino">
+          <div class="sobre-fotos">
+            <img src="images/sobre-mi/arcos.jpg" alt="Alejandra entre columnas y arcos de piedra" width="900" height="900" decoding="async" class="sobre-foto visible" aria-hidden="false">
+            <img src="images/sobre-mi/templos.jpg" alt="Alejandra visitando un conjunto de templos de piedra" width="900" height="900" decoding="async" class="sobre-foto" aria-hidden="true">
+            <img src="images/sobre-mi/cocina.jpg" alt="Alejandra disfrutando de una comida durante un viaje" width="900" height="900" decoding="async" class="sobre-foto" aria-hidden="true">
+            <img src="images/sobre-mi/encuentros.jpg" alt="Alejandra junto a una torre de piedra en una colina" width="900" height="900" decoding="async" class="sobre-foto" aria-hidden="true">
+          </div>
+          <div class="sobre-controles" hidden>
+            <button type="button" data-anterior aria-label="Foto anterior">←</button>
+            <span data-contador aria-live="off">1 / 4</span>
+            <button type="button" data-siguiente aria-label="Foto siguiente">→</button>
+            <button type="button" data-pausa>Pausar</button>
+          </div>
         </div>
         <p>Mi camino nunca fue un camino recto.</p>
         <p>Me perdí tantas veces que no tuve más remedio que aprender a encontrarme.</p>
@@ -134,6 +147,13 @@
 
         <p class="separador">⸻</p>
 
+        <h2>Sigo disfrutando de aprender</h2>
+        <p>A día de hoy, me sigo divirtiendo mucho aprendiendo.</p>
+        <p>Estudio inversión porque, para mí, tener una base financiera sólida, con los pies en la tierra, también ayuda a conectar con el espíritu.</p>
+        <p>Cada semana sigo aprendiendo geometría sagrada. Me fascinan los símbolos y los conocimientos mistéricos, esas formas de mirar que despiertan mi curiosidad y me invitan a seguir explorando.</p>
+        <p>Y practico y aprendo magia rodeada de mujeres poderosas.</p>
+        <p>Lo terrenal y lo espiritual conviven en mí. Ambos forman parte de este camino.</p>
+        <p class="separador">⸻</p>
         <p>No creo en las personas que ya han llegado.</p>
         <p class="pregunta-clave">
           Creo en las personas que siguen caminando.<br>
