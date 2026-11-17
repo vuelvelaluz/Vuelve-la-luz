@@ -1268,3 +1268,20 @@ h2 { font-size: clamp(2rem, 3.8vw, 3.2rem); letter-spacing: -.04em; }
   .services-list a { grid-template-columns: 26px minmax(0, 1fr) 64px 18px; gap: 7px; }
   .service-name { overflow-wrap: anywhere; }
 }
+
+/* Mobile review: give the original fine-lined wordmark room to render. */
+@media (max-width: 780px) {
+  .cabecera .logo-img { width: 80px; height: 80px; max-width: none; }
+  .cabecera .nav { min-height: 92px; }
+  .menu-toggle { min-height: 44px; }
+  html { scroll-padding-top: 100px; }
+  .enlaces-page .links-top .logo-img { width: 80px; height: 80px; }
+}
+@media (max-width: 380px) {
+  .enlaces-page .links-grid { grid-template-columns: minmax(0, 1fr); }
+  .enlaces-page .link-tile:nth-child(n) { grid-column: 1; min-width: 0; }
+  .enlaces-page .links-bottom { min-width: 0; }
+}
+@media (max-width: 780px) {
+  .hero:not(.collage-hero)::after { opacity: .18; }
+}
